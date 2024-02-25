@@ -1,6 +1,13 @@
 <script setup lang="ts">
 //import HelloWorld from './components/HelloWorld.vue'
 import Main from './components/Main.vue';
+
+// window.addEventListener('wheel', checkScrollDirection);
+// function checkScrollDirection(event) {
+//   console.log(event.wheelDelta > 0);
+// }
+window.addEventListener('wheel', (event) => {console.log(event.deltaY > 0)})
+
 </script>
 
 <template>
