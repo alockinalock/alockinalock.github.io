@@ -3,9 +3,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { onMounted } from "vue";
 gsap.registerPlugin(ScrollTrigger);
-// Ignore the error codes, Typescript doesn't like what is done in Javascript
-// But since this file is dealing with DOM, I don't care to fix it.
-// The only reason this <script> tag is in ts is for when I import .ts files
 var TxtType = function(el, toRotate, period) {
       this.toRotate = toRotate;
       this.el = el;
@@ -61,15 +58,6 @@ window.onload = function() {
     }
   }, 500);
 }
-onMounted(() => {
-  gsap.to(".a", {
-    scrollTrigger: {
-      trigger: ".a",
-      start: "top end",
-    },
-    x: 500,
-  });
-});
 </script>
 
 <template>
@@ -79,15 +67,9 @@ onMounted(() => {
   </div>
   <!---->
   <div class="dots-container"></div>
-  <div class="box a"></div>
 </template>
 
 <style scoped>
-.a {
-  background-color: red;
-  width: 100px;
-  height: 100px;
-}
 .dots-container {
   position: fixed;
   top: 0;
@@ -104,7 +86,10 @@ onMounted(() => {
 		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		var(--dot-color);
-  /* Background seems to act erratic during animation fade in */
+  /* 
+  Background seems to act erratic during animation fade in
+  Loop is not seamless
+  */
   animation: dotFadeIn 1s both, continousDiagonalSouthEast 30s 0.25s linear infinite;
 }
 .title {
