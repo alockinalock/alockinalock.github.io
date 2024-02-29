@@ -67,9 +67,21 @@ window.onload = function() {
   </div>
   <!---->
   <div class="dots-container"></div>
+  <!-- <div class="centerline" style="position:absolute;color:red;background-color:red;width:100%;height:1px;top:50%;"></div> -->
+
+  <!--Temporary hint div because this website isnt done-->
+  <div class="hint"><h5>Try scrolling down to see the rest of the website...</h5></div>
+
 </template>
 
 <style scoped>
+.hint {
+  width: 80%;
+  position: absolute;
+  top: 95%;
+  left: 0;
+  transform: translateX(50%)
+}
 .dots-container {
   position: fixed;
   top: 0;
@@ -95,8 +107,11 @@ window.onload = function() {
 .title {
   display: flex;
   flex-direction: column;
-  position: relative;
-  left: 10vh;
+  position: fixed;
+  left: 5%;
+  /*TODO: settled on 40% because 50% doesnt fucking CENTER.... WHY*/
+  top: 50%;
+  transform: translateY(-50%);
 
   width: 100%;
   padding: 0;
