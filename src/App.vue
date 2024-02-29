@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="js">
 import { onMounted } from 'vue';
 import { ref } from 'vue'
 import Main from './en/components/Main.vue';

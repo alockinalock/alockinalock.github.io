@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="js">
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { onMounted } from "vue";
