@@ -51,7 +51,7 @@ window.onload = function() {
     let element = document.getElementById("typewriter-greeting");
     let toRotate = element.getAttribute('data-type');
     let period = element.getAttribute('data-period');
-    // Not actually the username, I'm just too lazy to refactor
+    // Not actually the username, I'm just too lazy to refactor.
     let innerElement = document.getElementById("dynamically-changing-username");
     if (toRotate) {
       new TxtType(innerElement, JSON.parse(toRotate), period);
