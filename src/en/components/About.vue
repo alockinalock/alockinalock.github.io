@@ -1,4 +1,4 @@
-<script setup="js">
+<script setup="ts">
 
 </script>
 
@@ -18,7 +18,7 @@
     A clear example of this incompetency is these pages. The text here isn't even centered. I'm trying to figure it out 🥲
     </h3> 
 </div>
-  <!-- <div class="centerline" style="position:absolute;color:red;background-color:red;width:100%;height:1px;top:50%;"></div> -->
+  <div class="centerline" style="position:absolute;color:red;background-color:red;width:100%;height:1px;top:50%;"></div>
 </template>
 
 <style scoped>

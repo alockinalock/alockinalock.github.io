@@ -1,4 +1,4 @@
-<script setup lang="js">
+<script setup lang="ts">
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { onMounted } from "vue";
@@ -61,13 +61,15 @@ window.onload = function() {
 </script>
 
 <template>
-  <div class="title">
-    <h1 id="title-home">Hi, I'm <span id="username-title">alockinalock</span></h1>
-    <h2 id="typewriter-greeting" data-period="2000" data-type='["make videos.", "develop games.", "program applications."]'>I <span id="dynamically-changing-username"></span></h2>
-  </div>
+    <div class="title-container">
+      <div class="title">
+      <h1 id="title-home">Hi, I'm <span id="username-title">alockinalock</span></h1>
+      <h2 id="typewriter-greeting" data-period="2000" data-type='["make videos.", "develop games.", "program applications."]'>I <span id="dynamically-changing-username"></span></h2>
+    </div>
+  </div>  
   <!---->
   <div class="dots-container"></div>
-  <!-- <div class="centerline" style="position:absolute;color:red;background-color:red;width:100%;height:1px;top:50%;"></div> -->
+  <div class="centerline" style="position:absolute;color:red;background-color:red;width:100%;height:1px;top:50%;"></div>
 
   <!--Temporary hint div because this website isnt done-->
   <div class="hint"><h5>Try scrolling down to see the rest of the website...</h5></div>
@@ -80,7 +82,6 @@ window.onload = function() {
   position: absolute;
   top: 95%;
   left: 0;
-  transform: translateX(50%)
 }
 .dots-container {
   position: fixed;
@@ -107,13 +108,13 @@ window.onload = function() {
 .title {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   left: 5%;
-  /*TODO: settled on 40% because 50% doesnt fucking CENTER.... WHY*/
   top: 50%;
   transform: translateY(-50%);
 
   width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
 
