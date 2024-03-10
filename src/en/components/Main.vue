@@ -69,11 +69,6 @@ window.onload = function() {
   </div>  
   <!---->
   <div class="dots-container"></div>
-  <div class="centerline" style="position:absolute;color:red;background-color:red;width:100%;height:1px;top:50%;"></div>
-
-  <!--Temporary hint div because this website isnt done-->
-  <div class="hint"><h5>Try scrolling down to see the rest of the website...</h5></div>
-
 </template>
 
 <style scoped>
@@ -110,7 +105,7 @@ window.onload = function() {
   flex-direction: column;
   position: absolute;
   left: 5%;
-  top: 50%;
+  justify-content: center;
   transform: translateY(-50%);
 
   width: 100%;
