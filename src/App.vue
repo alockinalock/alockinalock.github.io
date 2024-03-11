@@ -57,9 +57,9 @@ function syncNav() {
 <template>
   <div class="components-container" >
     <div class="slide-custom is-current-slide"><Main/></div>
-    <div class="slide-custom is-next-slide"><About/></div>
     <div class="slide-custom is-next-slide"><Projects/></div>
     <div class="slide-custom is-next-slide"><Skills/></div>
+    <div class="slide-custom is-next-slide"><About/></div>
   </div>
   
   <div class="nav-bar hidden">
@@ -73,15 +73,15 @@ function syncNav() {
         </div>
 
         <div class="nav-item">
-          <div class="nav-item-name">about()</div>
-        </div>
-
-        <div class="nav-item">
           <div class="nav-item-name">projects()</div>
         </div>
 
         <div class="nav-item">
           <div class="nav-item-name">skills()</div>
+        </div>
+
+        <div class="nav-item">
+          <div class="nav-item-name">about()</div>
         </div>
 
       </div>
@@ -126,10 +126,10 @@ function syncNav() {
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: absolute;
   z-index: 11;
-  left: 92%;
-  top: 2%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   margin: 0;
   padding: 0;
 

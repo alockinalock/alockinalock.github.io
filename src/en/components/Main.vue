@@ -72,12 +72,6 @@ window.onload = function() {
 </template>
 
 <style scoped>
-.hint {
-  width: 80%;
-  position: absolute;
-  top: 95%;
-  left: 0;
-}
 .dots-container {
   position: fixed;
   top: 0;
@@ -95,8 +89,8 @@ window.onload = function() {
 		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		var(--dot-color);
   /* 
-  Background seems to act erratic during animation fade in
-  Loop is not seamless
+  Background seems to act erratic during animation fade in;
+  loop is not seamless... gotta find another way I guess.
   */
   animation: dotFadeIn 1s both, continousDiagonalSouthEast 30s 0.25s linear infinite;
 }
