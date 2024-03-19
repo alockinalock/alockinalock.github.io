@@ -3,51 +3,48 @@
 </script>
 
 <template>
-  <div class="items-container">
+  <div class="gallery">
+      <div class="gallery-wrapper" style="overflow: visible !important;">
+      <div class="items-container">
 
-    <div class="item">
-      <h1>test2</h1>
+        <!-- ok so the strategy is to have 2 divs and the img. so in short the img goes in one div which allows overflow and the div that contains this div with the img should stop overflow -->
+
+        <div class="role">
+          <a href="https://github.com/alockinalock/RustyTodoCLI" target="_blank">
+            <div class="item">
+              <div class="img">
+                <img class="background" src="../assets/Rust_programming_language_black_logo.svg.png" style="overflow: hidden">
+              </div>
+              <div class="overlay"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="role">
+          <a href="https://github.com/alockinalock/Personal-Website" target="_blank">
+            <div class="item">
+              <div class="img">
+                <img class="background" src="../assets/Vue.js_Logo_2.svg.png" style="pointer-events: none; overflow: hidden">
+              </div>
+              <div class="overlay"></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="item">
+          
+        </div>
+
+        <div class="item">
+          
+        </div>
+
+      </div>
+
     </div>
-
-    <div class="item">
-      <h1>test2</h1>
-    </div>
-
-    <div class="item">
-      <h1>test2</h1>
-    </div>
-
-    <div class="item">
-      <h1>test2</h1>
-    </div>
-
   </div>
 </template>
 
 <style scoped>
-.item:hover {
-  width: 12em;
-}
-.item {
-  margin-left: 50px;
-  width: 8em;
-
-  background-color: rgb(60, 60, 60);
-
-  transition: width .25s ease, right .25s ease;
-}
-.items-container {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  height: 75%;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
+@import  "./css/expandingSlider.css";
 </style>

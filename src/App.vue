@@ -147,6 +147,8 @@ function syncNav() {
 }
 .nav-bar {
   visibility: visible;
+  position: absolute;
+  z-index: 99;
 }
 .nav-list {
   box-sizing: border-box;
