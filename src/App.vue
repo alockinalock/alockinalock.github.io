@@ -26,8 +26,6 @@ function checkDelay() {
   let status = false;
   const timeAtCheck = Date.now();
   const timeDifference = timeAtCheck - lastScrollTime;
-  console.log(timeDifference);
-  console.log(timeDifference);
   if (timeDifference > 1250) {
     status = true;
     lastScrollTime = timeAtCheck;
