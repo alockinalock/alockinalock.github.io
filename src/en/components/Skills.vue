@@ -6,7 +6,7 @@
 
     <div class="gallery">
 
-      <div class="title">skills()</div>
+      <div class="page-title">current.skills()</div>
 
       <div class="gallery-wrapper" style="overflow: visible !important;">
         <div class="items-container">
@@ -75,12 +75,11 @@
 
 <style scoped>
 @import  "./css/expandingSlider.css";
-.title {
+.gallery .page-title {
   position: absolute;
-  font-size: 27px;
-  font-weight: 600;
-  right: 0;
-  top: 4rem;
-  width: 90%;
+  font-size: 1.7179rem;
+  right: 6.85155rem;
+  left: 12.957rem;
+  top: 4.2615rem;
 }
 </style>
