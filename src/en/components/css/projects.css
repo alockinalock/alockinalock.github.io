@@ -5,6 +5,18 @@
   color: #fff;
 }
 
+.feature .feature-content .feature-item .feature-modal .feature-text-box .feature-link .feature-link-image{
+  height: 1.75rem;
+  width: 1.75rem;
+  margin-left: .75rem;
+}
+
+.feature .feature-content .feature-item .feature-modal .feature-text-box .feature-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .feature .feature-content .feature-item .feature-modal .feature-text-box .text-1 {
   font-size: 2.845666rem;
   font-weight: 600;

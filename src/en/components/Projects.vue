@@ -54,7 +54,10 @@ function syncProgressBar(index) {
         <div class="feature-modal">
           <img src="../assets/10.png">
           <div class="feature-text-box">
-            <div class="text-1">RustyTodoCLI</div>
+            <a class = "feature-link" href="https://github.com/alockinalock/RustyTodoCLI" target="_blank" style="text-decoration: none;">
+              <div class="text-1">RustyTodoCLI</div>
+              <img class="feature-link-image" src="../assets/link.png">
+            </a>
             <div class="text-2">A simple todo planner following CRUD principles</div>
           </div>
         </div>
@@ -64,7 +67,10 @@ function syncProgressBar(index) {
         <div class="feature-modal">
           <img src="../assets/2.png">
           <div class="feature-text-box">
-            <div class="text-1">Personal Website</div>
+            <a class = "feature-link" href="https://github.com/alockinalock/Personal-Website" target="_blank" style="text-decoration: none;">
+              <div class="text-1">Personal Website</div>
+              <img class="feature-link-image" src="../assets/link.png">
+            </a>
             <div class="text-2">The current website you're on, made with Vue.js and more</div>
           </div>
         </div>
@@ -74,7 +80,10 @@ function syncProgressBar(index) {
         <div class="feature-modal">
           <img src="../assets/11.png">
           <div class="feature-text-box">
-            <div class="text-1">ChaosBot</div>
+            <a class = "feature-link" href="https://github.com/alockinalock/ChaosBot" target="_blank" style="text-decoration: none;">
+              <div class="text-1">ChaosBot</div>
+              <img class="feature-link-image" src="../assets/link.png">
+            </a>
             <div class="text-2">A discord bot intended to create chaos through randomization of commands</div>
           </div>
         </div>
@@ -84,7 +93,10 @@ function syncProgressBar(index) {
         <div class="feature-modal">
           <img src="../assets/8.png">
           <div class="feature-text-box">
-            <div class="text-1">CheckCards</div>
+            <a class = "feature-link" href="https://github.com/alockinalock/CheckCards" target="_blank" style="text-decoration: none;">
+              <div class="text-1">CheckCards</div>
+              <img class="feature-link-image" src="../assets/link.png">
+            </a>
             <div class="text-2">Checkers with a hint of deckbuilding</div>
           </div>
         </div>
@@ -101,6 +113,7 @@ function syncProgressBar(index) {
 
 <style scoped>
 @import "./css/projects.css";
+
 .feature .page-title {
   position: absolute;
   font-size: 1.7179rem;
