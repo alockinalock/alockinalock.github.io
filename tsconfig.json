@@ -15,7 +15,7 @@
     "jsx": "preserve",
 
     /* Linting */
-    "strict": true,
+    "strict": false, // TODO: reactive once all javascript/typescript is refactored into files
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,

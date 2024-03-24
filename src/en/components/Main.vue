@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { onMounted } from "vue";
 gsap.registerPlugin(ScrollTrigger);
 var TxtType = function(el, toRotate, period) {
       this.toRotate = toRotate;
