@@ -7,7 +7,6 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
     "gsap": "^3.12.5",
