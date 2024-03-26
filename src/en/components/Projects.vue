@@ -67,7 +67,7 @@ function syncProgressBar(index) {
         <div class="feature-modal">
           <img src="../assets/2.png">
           <div class="feature-text-box">
-            <a class = "feature-link" href="https://github.com/alockinalock/Personal-Website" target="_blank" style="text-decoration: none;">
+            <a class = "feature-link" href="https://alockinalock.github.io/" target="_blank" style="text-decoration: none;">
               <div class="text-1">Personal Website</div>
               <img class="feature-link-image" src="../assets/link.png">
             </a>
