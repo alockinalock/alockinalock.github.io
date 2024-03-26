@@ -25,7 +25,7 @@ TxtType.prototype.tick = function () {
   this.el.innerHTML = this.txt;
 
   let that = this;
-  let delta = 200 - Math.random() * 100;
+  let delta = 150 - Math.random() * 100;
 
   if (this.isDeleting) { delta /= 2 }
 
@@ -50,7 +50,6 @@ window.onload = function() {
     let element = document.getElementById("typewriter-greeting");
     let toRotate = element.getAttribute('data-type');
     let period = element.getAttribute('data-period');
-    // Not actually the username, I'm just too lazy to refactor.
     let innerElement = document.getElementById("dynamically-changing-username");
     if (toRotate) {
       new TxtType(innerElement, JSON.parse(toRotate), period);

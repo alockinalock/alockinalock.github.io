@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { gsap } from "gsap";
+import _ from "lodash";
 import { Observer } from 'gsap/Observer';
 
 gsap.registerPlugin(Observer);
@@ -19,7 +20,29 @@ onMounted(() => {
     onUp: () => checkDelay() && traverseUp(),
     onDown: () => checkDelay() && traverseDown(),
   });
+
+  const navElements = document.getElementsByClassName("nav-item");
+  _.forEach(navElements, (element, index) => {
+    element.addEventListener('click', () => navFunctionality(index));
+  });
 });
+
+function navFunctionality(index) {
+  let slides = document.getElementsByClassName("slide-custom");
+
+  for (let i = 0; i < index; i++) {
+    slides[i].setAttribute('class', 'slide-custom is-prev-slide');
+  }
+
+  slides[index].setAttribute('class', 'slide-custom is-current-slide');
+
+  for (let j = index + 1; j < slides.length; j++) {
+    slides[j].setAttribute('class', 'slide-custom is-next-slide');
+  }
+
+  syncNav();
+  modifyNavStatus();
+}
 
 function checkDelay() {
   let status = false;
@@ -73,6 +96,7 @@ function syncNav() {
     currentNavItem[0].setAttribute('class', 'nav-item-name');
     allNavItems[len].setAttribute('class', 'nav-item-name active');
 }
+
 </script>
 
 <template>
@@ -134,21 +158,31 @@ function syncNav() {
 </template>
 
 <style scoped>
+.nav-item:first-child .nav-item-name {
+  transition: none 0s;
+}
 .nav-item-name {
   font-size: 20px;
   opacity: 0.68;
+  transition: font-size 0.3s;
 }
 .active {
   opacity: 1;
   font-size: 27px;
   font-weight: 600;
 }
+.nav-list {
+  height: 15.656rem;
+}
 .nav {
   position: fixed;
   left: 2%;
-  top: 50%;
-  transform: translateY(-50%);
   cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: visible;
 }
 .links-list {
   display: flex;
