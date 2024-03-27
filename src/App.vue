@@ -81,10 +81,10 @@ function modifyNavStatus() {
   let allNexts = document.getElementsByClassName("is-next-slide");
   let navBar = document.getElementsByClassName("nav-bar");
   if (allNexts.length > 2) {
-    navBar[0].setAttribute('class', 'nav-bar hidden');
+    navBar[0].classList.add("hidden");
   }
   else {
-    navBar[0].setAttribute('class', 'nav-bar');
+    navBar[0].classList.remove("hidden");
   }
 }
 
@@ -93,8 +93,8 @@ function syncNav() {
     let currentNavItem = document.getElementsByClassName('nav-item-name active');
     let prevName = document.getElementsByClassName('is-prev-slide');
     let len = prevName.length;
-    currentNavItem[0].setAttribute('class', 'nav-item-name');
-    allNavItems[len].setAttribute('class', 'nav-item-name active');
+    currentNavItem[0].classList.remove("active");
+    allNavItems[len].classList.add("active");
 }
 
 </script>
