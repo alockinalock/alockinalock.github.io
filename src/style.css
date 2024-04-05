@@ -12,6 +12,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* 
+you know, originally i had forgotten about these lines
+i used rem values though for the rest of my CSS, so these lines actually affected that...
+*/
 body {
   margin: 0;
   display: flex;

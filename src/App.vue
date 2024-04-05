@@ -64,6 +64,7 @@ function traverseDown() {
   }
   syncNav();
   modifyNavStatus();
+  showFooter(next);
 }
 
 function traverseUp() {
@@ -74,7 +75,8 @@ function traverseUp() {
     next[next.length - 1].setAttribute('class', 'slide-custom is-current-slide');
   }
   syncNav();
-  modifyNavStatus()
+  modifyNavStatus();
+  hideFooter(prev);
 }
 
 function modifyNavStatus() {
@@ -95,6 +97,21 @@ function syncNav() {
     let len = prevName.length;
     currentNavItem[0].classList.remove("active");
     allNavItems[len].classList.add("active");
+}
+
+// fix these functions for footer
+function showFooter(elements) {
+  let footerElement = document.querySelector('.footer');
+  if (elements.length > 3) {
+    footer.style.transform = 'translate(0px, -200px)';
+  }
+}
+
+function hideFooter(elements) {
+  let footerElement = document.querySelector('.footer');
+  if (elements.length > 3) {
+    footer.style.transform = 'translate(0px)';
+  }
 }
 
 </script>
@@ -153,11 +170,39 @@ function syncNav() {
         </div>
     </div>
 
+    <div class="footer" style="transform: translate(0px);">
+      <div class="contact-info"></div>
+    </div>
+
   </div>
 
 </template>
 
 <style scoped>
+@import "./style.css";
+
+#app {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+div, body, li, ul, ol, p, nav, a, section {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  z-index: 100;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all .3s;
+}
+
 .nav-item:first-child .nav-item-name {
   transition: none 0s;
 }
@@ -222,6 +267,42 @@ function syncNav() {
   visibility: hidden;
 }
 
+.footer .contact-info {
+  /* CSS Here */
+}
+
+.footer {
+  position:relative;
+  width:100%;
+  height:13.808rem;
+  -ms-flex-negative:0;
+  flex-shrink:0;
+  color:#fff;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center;
+  -webkit-box-pack:center;
+  -ms-flex-pack:center;
+  justify-content:center;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
+  -ms-flex-line-pack:center;
+  align-content:center;
+  background:#fff;
+  margin:0 auto;
+  -ms-touch-action:none;
+  touch-action:none;
+  pointer-events:auto;
+  -webkit-transition:-webkit-transform .4s ease-out;
+  transition:-webkit-transform .4s ease-out;
+  transition:transform .4s ease-out;
+  transition:transform .4s ease-out,-webkit-transform .4s ease-out;
+  overflow:hidden
+}
+
 .slide-custom {
   position: absolute;
   width: 100%;
@@ -252,27 +333,5 @@ function syncNav() {
 @keyframes riseAndFadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0px);}
-}
-
-#app {
-  scroll-behavior: smooth;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-div, body, li, ul, ol, p, nav, a, section {
-  box-sizing: border-box;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.container {
-  height: 100vh;
-  width: 100vw;
-  background-color: transparent;
-  z-index: 100;
-  position: relative;
-  -webkit-transition: all 0.3s;
-  transition: all .3s;
 }
 </style>

@@ -48,6 +48,7 @@ function syncProgressBar(index) {
 
     <div class="page-title">featured.projects()</div>
 
+
     <div class="feature-content" style="bottom: 0px;">
 
       <div class="feature-item active" style="margin-bottom: 0px;">
