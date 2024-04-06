@@ -12,13 +12,24 @@ import Skills from './en/components/Skills.vue'
 import About from './en/components/About.vue';
 
 let lastScrollTime = -1250;
+let footerPrepared = false;
 
 onMounted(() => {
   Observer.create({
     target: window, 
     type: "wheel, scroll, touch",
-    onUp: () => checkDelay() && traverseUp(),
-    onDown: () => checkDelay() && traverseDown(),
+    onUp: () => {      
+      hideFooter(); 
+      if (checkDelay()) { 
+        traverseUp(); 
+      }
+    },
+    onDown: () => {
+      showFooter();
+      if (checkDelay()) {
+        traverseDown();
+      }
+    },
   });
 
   const navElements = document.getElementsByClassName("nav-item");
@@ -62,9 +73,12 @@ function traverseDown() {
     next[0].setAttribute('class', 'slide-custom is-current-slide');
     prev[0].setAttribute('class', 'slide-custom is-prev-slide');
   }
+  let footerStateManagement = document.getElementsByClassName("is-prev-slide");
+  if (footerStateManagement.length == 3) {
+    footerPrepared = true;
+  }
   syncNav();
   modifyNavStatus();
-  showFooter(next);
 }
 
 function traverseUp() {
@@ -74,9 +88,11 @@ function traverseUp() {
     prev[0].setAttribute('class', 'slide-custom is-next-slide');
     next[next.length - 1].setAttribute('class', 'slide-custom is-current-slide');
   }
+  if (next.length == 3 && footerPrepared) {
+    footerPrepared = false;
+  }
   syncNav();
   modifyNavStatus();
-  hideFooter(prev);
 }
 
 function modifyNavStatus() {
@@ -100,17 +116,21 @@ function syncNav() {
 }
 
 // fix these functions for footer
-function showFooter(elements) {
+function showFooter() {
+  let prevElements = document.getElementsByClassName("is-prev-slide");
   let footerElement = document.querySelector('.footer');
-  if (elements.length > 3) {
-    footer.style.transform = 'translate(0px, -200px)';
+  if (footerPrepared) {
+    footerElement.setAttribute('style', 'transform: translate(0px, -200px)');
+    console.log("show footer");
   }
 }
 
-function hideFooter(elements) {
+function hideFooter() {
+  let prevElements = document.getElementsByClassName("is-prev-slide");
   let footerElement = document.querySelector('.footer');
-  if (elements.length > 3) {
-    footer.style.transform = 'translate(0px)';
+  if (prevElements.length == 3) {
+    footerElement.setAttribute('style', 'transform: translate(0px)');
+    console.log("hide footer");
   }
 }
 
@@ -300,7 +320,8 @@ div, body, li, ul, ol, p, nav, a, section {
   transition:-webkit-transform .4s ease-out;
   transition:transform .4s ease-out;
   transition:transform .4s ease-out,-webkit-transform .4s ease-out;
-  overflow:hidden
+  overflow:hidden;
+  z-index: 500;
 }
 
 .slide-custom {
