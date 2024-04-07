@@ -13,21 +13,37 @@ import About from './en/components/About.vue';
 
 let lastScrollTime = -1250;
 let footerPrepared = false;
+let allowSpam = false;
 
 onMounted(() => {
   Observer.create({
     target: window, 
     type: "wheel, scroll, touch",
     onUp: () => {      
-      hideFooter(); 
-      if (checkDelay()) { 
-        traverseUp(); 
+      console.log("on up: " + footerPrepared);
+      if (footerPrepared) {
+        hideFooter(); 
+      }
+      else {
+        if (checkDelay()) { 
+          traverseUp(); 
+        }
       }
     },
     onDown: () => {
-      showFooter();
-      if (checkDelay()) {
-        traverseDown();
+      console.log("on down footerprep:"  + footerPrepared);
+      console.log("on down allowspam:"  + allowSpam);
+      if (allowSpam) {
+        showFooter();
+      }
+      else if (footerPrepared && checkDelay()) {
+        showFooter();
+        allowSpam = true;
+      }
+      else {
+        if (checkDelay()) {
+          traverseDown();
+        }
       }
     },
   });
@@ -74,7 +90,7 @@ function traverseDown() {
     prev[0].setAttribute('class', 'slide-custom is-prev-slide');
   }
   let footerStateManagement = document.getElementsByClassName("is-prev-slide");
-  if (footerStateManagement.length == 3) {
+  if (footerStateManagement.length == 3 && !footerPrepared) {
     footerPrepared = true;
   }
   syncNav();
@@ -88,8 +104,8 @@ function traverseUp() {
     prev[0].setAttribute('class', 'slide-custom is-next-slide');
     next[next.length - 1].setAttribute('class', 'slide-custom is-current-slide');
   }
-  if (next.length == 3 && footerPrepared) {
-    footerPrepared = false;
+  if (next.length == 2) {
+    allowSpam = false;
   }
   syncNav();
   modifyNavStatus();
@@ -116,8 +132,8 @@ function syncNav() {
 }
 
 // fix these functions for footer
+// footer should lock the nav bar from interactivity
 function showFooter() {
-  let prevElements = document.getElementsByClassName("is-prev-slide");
   let footerElement = document.querySelector('.footer');
   if (footerPrepared) {
     footerElement.setAttribute('style', 'transform: translate(0px, -200px)');
@@ -131,6 +147,9 @@ function hideFooter() {
   if (prevElements.length == 3) {
     footerElement.setAttribute('style', 'transform: translate(0px)');
     console.log("hide footer");
+  }
+  if (allowSpam) {
+    footerPrepared = false; 
   }
 }
 
@@ -191,7 +210,12 @@ function hideFooter() {
     </div>
 
     <div class="footer" style="transform: translate(0px);">
-      <div class="contact-info"></div>
+      <div class="contact-info">
+        <div class="contact-info-inner">
+          <h3>For general inquiries:  <a href="mailto:andrewjingxuanzhang@gmail.com">andrewjingxuanzhang@gmail.com</a></h3>
+          <h3>For YouTube related inquiries: <a href="mailto:alockinalock@gmail.com">alockinalock@gmail.com</a></h3>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -199,8 +223,6 @@ function hideFooter() {
 </template>
 
 <style scoped>
-@import "./style.css";
-
 #app {
   scroll-behavior: smooth;
   width: 100%;
@@ -283,12 +305,40 @@ div, body, li, ul, ol, p, nav, a, section {
   margin: 0;
   padding: 0;
 }
+
 .hidden {
   visibility: hidden;
 }
 
+.footer .contact-info .contact-info-inner h3, .footer .contact-info .contact-info-inner a {
+  margin: 0;
+  font-size: 1.012733rem;
+  font-weight: 650;
+  color: currentColor;
+  line-height: 1.756749rem;
+  color: #9d9d9d;
+}
+
+.footer .contact-info .contact-info-inner {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  -webkit-box-align:start;
+  -ms-flex-align:start;
+  align-items:flex-start
+}
+
 .footer .contact-info {
-  /* CSS Here */
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack:center;
+  -ms-flex-pack:center;
+  justify-content:center
 }
 
 .footer {
