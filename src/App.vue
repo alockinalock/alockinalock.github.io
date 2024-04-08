@@ -104,9 +104,9 @@ function traverseUp() {
     prev[0].setAttribute('class', 'slide-custom is-next-slide');
     next[next.length - 1].setAttribute('class', 'slide-custom is-current-slide');
   }
-  if (next.length == 2) {
-    allowSpam = false;
-  }
+  // if (next.length == 2) {
+  //   allowSpam = false;
+  // }
   syncNav();
   modifyNavStatus();
 }
@@ -135,21 +135,26 @@ function syncNav() {
 // footer should lock the nav bar from interactivity
 function showFooter() {
   let footerElement = document.querySelector('.footer');
+  let slidesContainerElement = document.querySelector(".container");
   if (footerPrepared) {
     footerElement.setAttribute('style', 'transform: translate(0px, -200px)');
+    slidesContainerElement.setAttribute('style', 'transform: translate(0px, -200px)');
     console.log("show footer");
   }
 }
 
 function hideFooter() {
   let prevElements = document.getElementsByClassName("is-prev-slide");
+  let slidesContainerElement = document.querySelector(".container");
   let footerElement = document.querySelector('.footer');
   if (prevElements.length == 3) {
     footerElement.setAttribute('style', 'transform: translate(0px)');
+    slidesContainerElement.setAttribute('style', 'transform: translate(0px)');
     console.log("hide footer");
   }
   if (allowSpam) {
     footerPrepared = false; 
+    allowSpam = false;
   }
 }
 
@@ -157,7 +162,7 @@ function hideFooter() {
 
 <template>
 
-  <div class="container">
+  <div class="container" style="transform: translate(0px);">
  
     <div class="components-container" >
       <div class="slide-custom is-current-slide"><Main/></div>
