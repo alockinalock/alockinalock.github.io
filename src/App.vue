@@ -170,6 +170,7 @@ function hideFooter() {
       <div class="slide-custom is-next-slide"><Skills/></div>
       <div class="slide-custom is-next-slide"><About/></div>
     </div>
+
     
     <div class="nav-bar hidden">
 
@@ -214,7 +215,9 @@ function hideFooter() {
         </div>
     </div>
 
-    <div class="footer" style="transform: translate(0px);">
+  </div>
+
+  <div class="footer" style="transform: translate(0px);">
       <div class="contact-info">
         <div class="contact-info-inner">
           <h3>For general inquiries:  <a href="mailto:andrewjingxuanzhang@gmail.com">andrewjingxuanzhang@gmail.com</a></h3>
@@ -222,8 +225,6 @@ function hideFooter() {
         </div>
       </div>
     </div>
-
-  </div>
 
 </template>
 
@@ -246,8 +247,12 @@ div, body, li, ul, ol, p, nav, a, section {
   background-color: transparent;
   z-index: 100;
   position: relative;
-  -webkit-transition: all 0.3s;
-  transition: all .3s;
+  /* -webkit-transition: all 0.3s;
+  transition: all .3s; */
+  -webkit-transition:-webkit-transform .4s ease-out;
+  transition:-webkit-transform .4s ease-out;
+  transition:transform .4s ease-out;
+  transition:transform .4s ease-out,-webkit-transform .4s ease-out
 }
 
 .nav-item:first-child .nav-item-name {
