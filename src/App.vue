@@ -13,15 +13,15 @@ import About from './en/components/About.vue';
 
 let lastScrollTime = -1250;
 let footerPrepared = false;
-let allowSpam = false;
 
 onMounted(() => {
   Observer.create({
     target: window, 
     type: "wheel, scroll, touch",
     onUp: () => {      
-      console.log("on up: " + footerPrepared);
-      if (footerPrepared) {
+
+      // initial call
+      if (footerPrepared && checkDelay()) {
         hideFooter(); 
       }
       else {
@@ -31,14 +31,9 @@ onMounted(() => {
       }
     },
     onDown: () => {
-      console.log("on down footerprep:"  + footerPrepared);
-      console.log("on down allowspam:"  + allowSpam);
-      if (allowSpam) {
+      // initial call
+      if (footerPrepared && checkDelay()) {
         showFooter();
-      }
-      else if (footerPrepared && checkDelay()) {
-        showFooter();
-        allowSpam = true;
       }
       else {
         if (checkDelay()) {
@@ -104,9 +99,6 @@ function traverseUp() {
     prev[0].setAttribute('class', 'slide-custom is-next-slide');
     next[next.length - 1].setAttribute('class', 'slide-custom is-current-slide');
   }
-  // if (next.length == 2) {
-  //   allowSpam = false;
-  // }
   syncNav();
   modifyNavStatus();
 }
@@ -137,9 +129,8 @@ function showFooter() {
   let footerElement = document.querySelector('.footer');
   let slidesContainerElement = document.querySelector(".container");
   if (footerPrepared) {
-    footerElement.setAttribute('style', 'transform: translate(0px, -200px)');
-    slidesContainerElement.setAttribute('style', 'transform: translate(0px, -200px)');
-    console.log("show footer");
+    footerElement.setAttribute('style', 'transform: translate(0px, -220.933px)');
+    slidesContainerElement.setAttribute('style', 'transform: translate(0px, -220.933px)');
   }
 }
 
@@ -150,11 +141,7 @@ function hideFooter() {
   if (prevElements.length == 3) {
     footerElement.setAttribute('style', 'transform: translate(0px)');
     slidesContainerElement.setAttribute('style', 'transform: translate(0px)');
-    console.log("hide footer");
-  }
-  if (allowSpam) {
-    footerPrepared = false; 
-    allowSpam = false;
+    footerPrepared = false;
   }
 }
 
