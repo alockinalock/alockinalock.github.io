@@ -9,15 +9,10 @@
         font-family: Golos Text, sans-serif;
         margin: 0 21.44px 0 21.44px;
 }
-.titleText {
-        display: inline-block;
-        transition: transform .27s ease-out,opacity 90ms ease-out;
+.backtrackTitle:hover {
+        opacity: .7;
 }
-.titleHide {
-        opacity:0;
-        transform:translateX(-10px);
-}
-.pageLinks {
+.socialLinks {
         font-size: 24px;
         position: relative;
         transition: color 50ms ease-in-out;
@@ -27,7 +22,7 @@
         z-index: 1;
         user-select: none;
 }
-.pageLinks:hover{
+.socialLinks:hover{
         color: var(--background);
 }
 .bg {
@@ -42,8 +37,8 @@
         transition: all .12s ease-in-out,border 60ms ease-in-out;
         pointer-events: none;
 }
-.pageLinks:hover > .bg,
-.pageLinks:focus > .bg {
+.socialLinks:hover > .bg,
+.socialLinks:focus > .bg {
         top: 0px;
         left: 0px;
         right: 0px;

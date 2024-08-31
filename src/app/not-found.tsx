@@ -1,9 +1,9 @@
 "use client";
 
-import styles from "./page.module.css";
+import styles from "./error.module.css";
 import { useEffect, useRef } from "react";
 
-export default function Home() {
+export default function Custom404() {
 
   let titleRef = useRef<HTMLHeadingElement>(null);
 
@@ -20,24 +20,19 @@ export default function Home() {
     <div className="mainWrapper">
       <main>
         <h1 className={`${styles.title} ${styles.titleHide}`} ref={titleRef}>
-          <span className={styles.titleText}>alockinalock</span>
+          <span className={styles.titleText}>
+            <a href = "/" className={styles.backtrackTitle}>alockinalock&nbsp;</a>
+            /
+          </span>
+          <span className = {styles.titleText}>&nbsp;404</span>
         </h1>
         <div style={{ width: "10px" }}></div>
         <div>
-          <a className={styles.pageLinks} href="/socials">
+          <a className={styles.pageLinks} href="/">
             <div className={styles.bg}></div>
-            socials
-          </a>
-          <a className={styles.pageLinks} href="/projects">
-            <div className={styles.bg}></div>
-            projects
-          </a>
-          <a className={styles.pageLinks} href="/contact">
-            <div className={styles.bg}></div>
-            contact me
+            home
           </a>
         </div>
-
       </main>
     </div>
   );
