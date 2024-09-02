@@ -7,9 +7,8 @@ export default function Socials() {
                                 <h1 className={styles.title} >
                                         <span>
                                                 <a href = "/" className={styles.backtrackTitle}>alockinalock&nbsp;</a>
-                                                /
+                                                / socials
                                         </span>
-                                        <span>&nbsp;socials</span>
                                 </h1>
                                 <div style={{ width: "10px"}}></div>
                                 <div>

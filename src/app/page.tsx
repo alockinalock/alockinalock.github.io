@@ -34,7 +34,7 @@ export default function Home() {
           </a>
           <a className={styles.pageLinks} href="/contact">
             <div className={styles.bg}></div>
-            contact me
+            contact
           </a>
         </div>
 

@@ -10,9 +10,8 @@ export default function Contact() {
                                 <h1 className={styles.title} >
                                         <span>
                                                 <a href = "/" className={styles.backtrackTitle}>alockinalock&nbsp;</a>
-                                                 /
+                                                 / contact
                                         </span>
-                                        <span>&nbsp;contact</span>
                                 </h1>
                                 <div style={{ width: "10px"}}></div>
                                 <div className = {styles.emailWrapper}>
@@ -30,7 +29,7 @@ export default function Contact() {
                                                 </a>
                                         </div>
                                         <hr className={styles.seperator}></hr>
-                                        <a className={`${styles.emailLink} ${styles.noMargin}`} href="/socials">
+                                        <a className={`${styles.emailLink} ${styles.noMargin}`} href="mailto:alockinalock@gmail.com">
                                                 <div className={styles.bg}  style={{ margin: "-2px 0" }}></div>
                                                 alockinalock@gmail.com
                                         </a>
