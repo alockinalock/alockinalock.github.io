@@ -25,6 +25,7 @@ export default function Contact() {
                                                                 width={24}
                                                                 height={24}
                                                                 style={{ color: "transparent", marginTop: "7px" }}
+                                                                onClick={() => navigator.clipboard.writeText("alockinalock@gmail.com")}
                                                         />
                                                 </a>
                                         </div>
