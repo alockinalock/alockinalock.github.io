@@ -1,9 +1,15 @@
+"use client";
+
 import styles from "./contact.module.css";
 import Image from "next/image";
 
 // Note: This page's CSS, more specifically for the links, is unique compared to the rest of the files.
 // In short, it's fucked. Margins are used a lot to tweaks minor things. Not sure if it works or is just a bandaid.
 export default function Contact() {
+        const handleClick = () => {
+                navigator.clipboard.writeText("alockinalock@gmail.com")
+        }
+
         return (
                 <div className="mainWrapper">
                         <main>
@@ -25,7 +31,7 @@ export default function Contact() {
                                                                 width={24}
                                                                 height={24}
                                                                 style={{ color: "transparent", marginTop: "7px" }}
-                                                                onClick={() => navigator.clipboard.writeText("alockinalock@gmail.com")}
+                                                                onClick={handleClick}
                                                         />
                                                 </a>
                                         </div>
