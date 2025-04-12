@@ -33,28 +33,26 @@ export default function destiny_geoguessr() {
 
                                   <div style = {{ height: "30px" }}></div>
                                   
-                                  <h3>Screenshots</h3>
+                                  <h3 style={{ width: "max-content"}}>Screenshots</h3>
 
                                   <Image 
                                   alt="The config page for Destiny Geoguessr which allows users to configure game settings"
                                   src="/dgcp.png"
-                                  width={1341}
-                                  height={791}
-                                  style={{ maxWidth: "100vmin", height: "100%"}}
+                                  width={1920}
+                                  height={1080}
                                   />
                                   <span style = {{opacity: "0.4", margin: "8px 0"}}>This image shows the [unstyled] configuration page.</span>
 
                                   <Image 
                                   alt="The geoguessr page for Destiny Geoguessr which users play in"
                                   src="/dggp.png"
-                                  width={1341}
-                                  height={791}
-                                  style={{ maxWidth: "100vmin", height: "100%"}}
+                                  width={1920}
+                                  height={1080}
                                   />
                                   <span style = {{opacity: "0.4",  margin: "8px 0"}}>This image shows the [unstyled] geoguessr page a.k.a. the game itself.</span>
 
                                   <div style={{ height: "120px" }}></div>
-                                  
+
                                 </div>
 
                             </div>

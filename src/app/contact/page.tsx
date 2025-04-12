@@ -21,23 +21,25 @@ export default function Contact() {
                                 </h1>
                                 <div style={{ width: "10px"}}></div>
                                 <div className = {styles.emailWrapper}>
-                                        <div className="iconTooltipContainer">
-                                                <a className={`${styles.emailLink} ${styles.noMargin}`}>
-                                                        <div className={styles.bg} style={{ marginTop: "-5px" }}></div>
+                                        <div className={styles.iconTTContainer}>
+                                                <a className={`${styles.emailLink} ${styles.noMargin}`} style={{top: "5px"}}>
+                                                        <div className={styles.bg} style={{ marginTop: "-8px", marginBottom: "-2px" }}></div>
                                                         <Image
                                                                 src="/content_copy_white_24dp.svg"
                                                                 alt="Copy to clipboard icon"
-                                                                className={styles.icon}
+                                                                className={`${styles.icon}`}
                                                                 width={24}
                                                                 height={24}
-                                                                style={{ color: "transparent", marginTop: "7px" }}
+                                                                style={{ color: "transparent", marginTop: "7px", paddingLeft: "8px", paddingRight: "8px"}}
                                                                 onClick={handleClick}
+                                                                
                                                         />
+                                                        <div style={{height: "10px"}}></div>
                                                 </a>
                                         </div>
                                         <hr className={styles.seperator}></hr>
-                                        <a className={`${styles.emailLink} ${styles.noMargin}`} href="mailto:alockinalock@gmail.com">
-                                                <div className={styles.bg}  style={{ margin: "-2px 0" }}></div>
+                                        <a className={`${styles.emailLink} ${styles.noMargin}`} href="mailto:alockinalock@gmail.com" style={{paddingLeft: "8px", paddingRight: "8px", marginTop: "10px"}}>
+                                                <div className={styles.bg}  style={{ margin: "-4px 0" }}></div>
                                                 alockinalock@gmail.com
                                         </a>
                                 </div>

@@ -8,7 +8,6 @@
         opacity: 1;
         font-family: Golos Text, sans-serif;
         margin: 0 21.44px 0 21.44px;
-        max-width: 97vmin;
 }
 .backtrackTitle:hover {
         opacity: .7;
@@ -16,14 +15,17 @@
 .emailWrapper {
         display: flex;
         flex-direction: row;
+        align-items: flex-start;
 }
 .seperator {
-        margin: -2px .3rem;
+        margin: 5px .3rem -2px .3rem;
         /* padding: 5px 0;
         height: 100%; */
         border: unset;
         border-right: 1px solid var(--foreground);
         opacity: 0.5;
+
+        height: 5vh
 }
 .emailLink {
         font-size: 24px;
@@ -31,7 +33,7 @@
         transition: color 50ms ease-in-out;
         cursor: pointer;
         margin-right: 12px;
-        padding: 2px 8px;
+        /* padding: 2px 8px; */
         z-index: 1;
         user-select: none;
 }

@@ -1,6 +1,9 @@
 .subMainWrapper {
+  width: 800px;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   overflow-y: auto;
   transform: translateY(50%);
   margin-top: -45px /* title is height of 39px plus 6px padding (3px top and 3px bottom) */
@@ -15,7 +18,6 @@
   opacity: 1;
   font-family: Golos Text, sans-serif;
   margin: 0 21.44px 0 21.44px;
-  max-width: 97vmin;
 }
 .backtrackTitle:hover {
   opacity: .7;
