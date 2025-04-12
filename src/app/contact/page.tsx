@@ -38,8 +38,8 @@ export default function Contact() {
                                                 </a>
                                         </div>
                                         <hr className={styles.seperator}></hr>
-                                        <a className={`${styles.emailLink} ${styles.noMargin}`} href="mailto:alockinalock@gmail.com" style={{paddingLeft: "8px", paddingRight: "8px", marginTop: "10px"}}>
-                                                <div className={styles.bg}  style={{ margin: "-4px 0" }}></div>
+                                        <a className={`${styles.emailLink} ${styles.noMargin}`} href="mailto:alockinalock@gmail.com" style={{paddingLeft: "8px", paddingRight: "8px", marginTop: "9.5px"}}>
+                                                <div className={styles.bg}  style={{ margin: "-5px 0" }}></div>
                                                 alockinalock@gmail.com
                                         </a>
                                 </div>
