@@ -12,7 +12,10 @@ export default function Socials() {
                                 </h1>
                                 <div style={{ width: "10px"}}></div>
                                 <div>
-                                        
+                                        <a className={styles.projectLinks} href="/destiny_geoguessr">
+                                                <div className={styles.bg}></div>
+                                                destiny_geoguessr
+                                        </a>
                                 </div>
                         </main>  
                 </div>

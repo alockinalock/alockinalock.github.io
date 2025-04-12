@@ -37,6 +37,11 @@ main {
         align-content: center;
         row-gap: 10px;
 }
+img {
+  width:100%;
+  max-width:800px;
+  height:auto;
+}
 .mainWrapper {
         display: flex;
         justify-items: center;

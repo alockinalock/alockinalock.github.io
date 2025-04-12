@@ -15,14 +15,17 @@
 .emailWrapper {
         display: flex;
         flex-direction: row;
+        align-items: flex-start;
 }
 .seperator {
-        margin: -2px .3rem;
+        margin: 4px .3rem -2px .3rem;
         /* padding: 5px 0;
         height: 100%; */
         border: unset;
         border-right: 1px solid var(--foreground);
         opacity: 0.5;
+
+        height: 2.5rem
 }
 .emailLink {
         font-size: 24px;
@@ -30,7 +33,7 @@
         transition: color 50ms ease-in-out;
         cursor: pointer;
         margin-right: 12px;
-        padding: 2px 8px;
+        /* padding: 2px 8px; */
         z-index: 1;
         user-select: none;
 }

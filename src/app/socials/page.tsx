@@ -18,11 +18,11 @@ export default function Socials() {
                                         </a>
                                         <a className={styles.socialLinks} href="https://www.youtube.com/@alockinalock">
                                                 <div className={styles.bg}></div>
-                                                youtube
+                                                hobby_youtube
                                         </a>
                                         <a className={styles.socialLinks} href="https://www.youtube.com/@alockinalock_dev">
                                                 <div className={styles.bg}></div>
-                                                video_devlogs
+                                                dev_youtube
                                         </a>
                                         <a className={styles.socialLinks} href="https://twitter.com/alockinalock">
                                                 <div className={styles.bg}></div>
