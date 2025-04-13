@@ -20,7 +20,7 @@ export default function Contact() {
                                         </span>
                                 </h1>
                                 <div style={{ width: "10px"}}></div>
-                                <div className = {styles.emailWrapper}>
+                                <div className = {styles.emailWrapper} style={{ marginBottom: "5px" }}>
                                         <div className={styles.iconTTContainer}>
                                                 <a className={`${styles.emailLink} ${styles.noMargin}`} style={{top: "5px"}}>
                                                         <div className={styles.bg} style={{ marginTop: "-6px", marginBottom: "-2px" }}></div>
@@ -34,7 +34,6 @@ export default function Contact() {
                                                                 onClick={handleClick}
                                                                 
                                                         />
-                                                        <div style={{height: "10px"}}></div>
                                                 </a>
                                         </div>
                                         <hr className={styles.seperator}></hr>
