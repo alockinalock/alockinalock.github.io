@@ -23,7 +23,7 @@ export default function Contact() {
                                 <div className = {styles.emailWrapper}>
                                         <div className={styles.iconTTContainer}>
                                                 <a className={`${styles.emailLink} ${styles.noMargin}`} style={{top: "5px"}}>
-                                                        <div className={styles.bg} style={{ marginTop: "-8px", marginBottom: "-2px" }}></div>
+                                                        <div className={styles.bg} style={{ marginTop: "-6px", marginBottom: "-2px" }}></div>
                                                         <Image
                                                                 src="/content_copy_white_24dp.svg"
                                                                 alt="Copy to clipboard icon"
@@ -38,8 +38,8 @@ export default function Contact() {
                                                 </a>
                                         </div>
                                         <hr className={styles.seperator}></hr>
-                                        <a className={`${styles.emailLink} ${styles.noMargin}`} href="mailto:alockinalock@gmail.com" style={{paddingLeft: "8px", paddingRight: "8px", marginTop: "9.5px"}}>
-                                                <div className={styles.bg}  style={{ margin: "-5px 0" }}></div>
+                                        <a className={`${styles.emailLink} ${styles.noMargin}`} href="mailto:alockinalock@gmail.com" style={{paddingLeft: "8px", paddingRight: "8px", marginTop: "9px"}}>
+                                                <div className={styles.bg}  style={{ margin: "-5px 0 -3px 0" }}></div>
                                                 alockinalock@gmail.com
                                         </a>
                                 </div>
