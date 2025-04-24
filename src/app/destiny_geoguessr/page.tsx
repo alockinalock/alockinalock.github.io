@@ -14,7 +14,7 @@ export default function destiny_geoguessr() {
                                                 / destiny_geoguessr
                                         </span>
                                 </h1>
-                                <div style = { { margin: "0 21.44px", display: "flex", flexDirection: "column"}}>
+                                <div style = { { display: "flex", flexDirection: "column"}}>
                                   
                                   <div style = {{ height: "20px" }}></div>
 

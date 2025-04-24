@@ -17,7 +17,7 @@
   transition: transform .17s ease-in-out,opacity .22s ease-in-out;
   opacity: 1;
   font-family: Golos Text, sans-serif;
-  margin: 0 21.44px 0 21.44px;
+  margin: 0;
 }
 .backtrackTitle:hover {
   opacity: .7;
