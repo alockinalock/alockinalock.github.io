@@ -195,7 +195,7 @@ function hideFooter() {
             </a>
           </div>
           <div class="links">
-            <a href="https://www.linkedin.com/in/andrew-zhang-8635b2297/" target="_blank">
+            <a href="" target="_blank">
               <img src="./en/assets/LinkedIn_icon_circle.svg.png" class="logo" alt="GitHub Logo">
             </a>
           </div>
@@ -207,7 +207,7 @@ function hideFooter() {
   <div class="footer" style="transform: translate(0px);">
       <div class="contact-info">
         <div class="contact-info-inner">
-          <h3>For general inquiries:  <a href="mailto:andrewjingxuanzhang@gmail.com">andrewjingxuanzhang@gmail.com</a></h3>
+          <h3>For general inquiries:  <a href=""></a></h3>
           <h3>For YouTube related inquiries: <a href="mailto:alockinalock@gmail.com">alockinalock@gmail.com</a></h3>
         </div>
       </div>
